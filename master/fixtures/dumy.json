@@ -1,0 +1,45 @@
+[
+  {
+    "model": "master.TypeContent",
+    "pk": 1,
+    "fields": {
+      "typ": "ENTJ",
+      "intro": "As an ENTJ,",
+      "intro_p": "strings",
+      "jung_pref": "strings",
+      "strength": "strings",
+      "strength_p": "strings",
+      "weakness": "strings",
+      "weakness_p": "strings",
+      "success": "strings",
+      "s2f": "strings",
+      "pot_prob": "strings",
+      "solns": "strings",
+      "living_happy": "strings",
+      "rules": "strings",
+      "rules_p": "strings"
+    }
+  },
+  {
+    "model": "master.TypeContent",
+    "pk": 2,
+    "fields": {
+      "typ": "INTJ",
+      "intro": "As an INTJ,",
+      "intro_p": "strings",
+      "jung_pref": "strings",
+      "strength": "strings",
+      "strength_p": "strings",
+      "weakness": "strings",
+      "weakness_p": "strings",
+      "success": "strings",
+      "s2f": "strings",
+      "pot_prob": "strings",
+      "solns": "strings",
+      "living_happy": "strings",
+      "rules": "strings",
+      "rules_p": "strings"
+    }
+  }
+]
+

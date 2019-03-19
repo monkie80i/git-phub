@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personality HUB | home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
+<style type="text/css">
+
+	#websites a {text-decoration: none;background-color: inherit}
+
+	.navbar-dark .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #f13416;
+		}
+		
+
+		
+	#logo {}
+	#Personality {font-family: 'Satisfy', cursive; color: #f13c1f;
+	font-size: 6vw;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 16px;
+	padding-top: 16px;}
+	
+	.navbar-toggle {border: 1px solid #f1f0eb;}
+	.icon-bar {background-color:#f1f0eb;}
+
+	body {background-color: #f1f0eb;}
+
+</style>
+<body>
+	<header >
+		<div class="container-float" id="logo">
+			<a href="{% url 'home' %}" style="text-decoration: none;"><h1 id="Personality" >~ Personality HUB ~</h1>
+			</a>
+			
+		</div>
+		<nav class="navbar navbar-dark" style="background-color: #4056a1;margin: 0;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+		<li><a href="{% url '16personalities' %}" style="color: white;">16Personalities</a></li>
+        <li><a href="{% url 'mbti' %}" style="color: white;">MBTI</a></li>
+        <li><a href="{% url 'resources' %}" style="color: white;">Resouces</a></li>
+        <li><a href="{% url 'test' %}" style="color: white;">Test me</a></li>
+        <li><a href="{% url 'about' %}" style="color: white;">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'signup' %}" style="color: white;"><span class="glyphicon glyphicon-user" style="color: white;"></span> Sign Up</a></li>
+        <li><a href="{% url 'login' %}" style="color: white;"><span class="glyphicon glyphicon-log-in" style="color: white;"></span> Login</a></li>
+         <li><a id="logout" href="{% url 'logout' %}" style="color: white;"><span class="glyphicon glyphicon-log-in" style="color: white;"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<div class="container">
+  <h2 style="text-align:center;">Resources</h2>
+  <p style="text-align:center;">There are decades of research done in the field of mbti</p>
+  
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#books">BOOKS</a></li>
+    <li><a data-toggle="tab" href="#websites">WEB</a></li>
+    <li><a data-toggle="tab" href="#forums">FORUM</a></li>
+    
+  </ul>
+
+  <div class="tab-content">
+    <div id="books" class="tab-pane fade in active">
+      <h3>BOOKS</h3>
+      <dl>
+     	 <dt>Gifts Differing: Understanding Personality Type</dt> 
+      		<dd>by Isabel Briggs Myers</dd><br>
+		<dt>Type Talk: The 16 Personality Types that Determine how We Live, Love, and Work</dt> 
+			<dd>by Janet M. Thuesen and Otto Kroeger</dd><br>
+		<dt>Please Understand Me</dt> 
+			<dd>by David Kiersey</dd><br>
+		<dt>Please Understand Me II </dt>
+			<dd>by David Kiersey</dd><br>
+		<dt>What Type Am I? Discover who You Really are</dt> 
+			<dd>by Renee Barton</dd><br>
+		<dt>I'm Not Crazy, I'm Just Not You: The Real Meaning of the 16 Personality Types</dt> 
+			<dd>by Roger R. Pearman and Sarah C. Albritton</dd><br>
+      </dl>
+    </div>
+    <div id="websites" class="tab-pane fade">
+      <h3>WEB</h3>
+      <ul>
+      	<li><a href="www.16personalities.com">www.16personalities.com</a></li>
+		<li><a href="https://www.truity.com">https://www.truity.com/</a></li>
+		<li><a href="https://www.myersbriggs.org/home.htm?bhcp=1">https://www.myersbriggs.org/home.htm?bhcp=1</a></li>
+		<li><a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp">http://www.humanmetrics.com/cgi-win/jtypes2.asp</a></li>
+		<li><a href="https://www.opp.com/en/tools/MBTI">https://www.opp.com/en/tools/MBTI</a></li>
+		<li><a href="https://psychcentral.com/quizzes/personality/start.php">https://psychcentral.com/quizzes/personality/start.php</a></li>
+		<li><a href="https://www.mbtionline.com/TaketheMBTI">https://www.mbtionline.com/TaketheMBTI</a></li>
+      </ul>
+    </div>
+    <div id="forums" class="tab-pane fade">
+      <h3>FORUM</h3>
+      <dl>
+      	<dt>Myers Briggs Forum - Personality Cafe</dt>
+		<dd>https://www.personalitycafe.com/myers-briggs-forum/</dd><br>
+		<dt>Forum - Typology Central</dt>
+		<dd>https://www.typologycentral.com/forums/forum.php</dd><br>
+		<dt>Myers Briggs (MBTI) Forums & Message Boards - Personality Growth</dt>
+		<dd>https://personalitygrowth.com/myers-briggs-mbti-forums-message-boards/</dd><br>
+		<dt>MBTI & Typology Archive | INTP Forum</dt>
+		<dd>https://www.intpforum.com › Forums › Within › MBTI & Typology</dd><br>
+      </dl>
+    </div>
+    
+  </div>
+</div>
+<script type="text/javascript">
+    var a = {{value}};
+    if(a==1){document.getElementById('login').style.display="none";
+      document.getElementById('signup').style.display="none";}
+    else{document.getElementById('logout').style.display="none";}  
+  </script>
+<footer>
+		<div class="container-fluid" style="background-color: lightgrey;">
+			<h3 style="text-align: center;">PersonalityHUB</h3>
+			<hr>
+			<div class="row" >
+					<div class="col-sm-3" style="color: gray;border-right: 1px solid grey;" >
+						<h4 style="text-align: center;">Navigation</h4>
+						<ul type="none">
+							<li>Home</li>
+							<li>16pesonalities</li>
+							<li>Resources</li>
+							<li>Take test</li>
+							<li>About</li>
+						</ul>
+					</div>
+					<div class=" col-sm-6"  style="text-align: center;color: gray;padding-top: 60px;border-right: 1px solid grey;padding-bottom: 65px;">
+					Copyright Owned by Shahzan Sadick.
+				    </div>
+					<div class="col-sm-3" style="text-align: center;color: gray;">
+						<h4><u>Lorem</u></h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+			</div>
+			<hr>
+		</div>	
+</footer>
+	
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personality HUB | 16personalities</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
+<style type="text/css">
+	.navbar-dark .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	    background-color: #f13416;
+			}
+.navbar-toggle {border: 1px solid #f1f0eb;}
+	.icon-bar {background-color:#f1f0eb;}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.text {text-align: center;font-style:italic;}
+.xxxx{color:gray;text-align:center;}
+.text-quote {color: gray;
+			font-style: italic;}
+
+.center {  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;}
+
+}
+	
+	.navbar-dark .navbar-nav > li > a:hover, .navbar-dark .navbar-nav > li > a:focus ,  {
+    background-color: #f13416;
+		}
+	
+
+	#logo {}
+	#Personality {font-family: 'Satisfy', cursive; color: #f13c1f;
+	font-size: 6vw;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 16px;
+	padding-top: 16px;}
+
+	body {background-color: #f1f0eb;}
+	
+	.title {text-align: center;font-style: italic;font-family: 'Libre Baskerville', serif;}
+	
+
+</style>
+<body>
+	<header>
+		<div class="container-float" id="logo">
+			<a href="{% url 'home' %}" style="text-decoration: none;"><h1 id="Personality" >~ Personality HUB ~</h1></a>
+			
+		</div>
+		<nav class="navbar navbar-dark" style="background-color: #4056a1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+		<li><a href="{% url '16personalities' %}" style="color: white;">16Personalities</a></li>
+        <li><a href="{% url 'mbti' %}" style="color: white;">MBTI</a></li>
+        <li><a href="{% url 'resources' %}" style="color: white;">Resouces</a></li>
+        <li><a href="{% url 'test' %}" style="color: white;">Test me</a></li>
+        <li><a href="{% url 'about' %}" style="color: white;">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'signup' %}" style="color: white;"><span class="glyphicon glyphicon-user" style="color: white;"></span> Sign Up</a></li>
+        <li>
+        <div class="dropdown">
+    	<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+    	<ul class="dropdown-menu">
+     	 <li><a href="{% url 'login' %}" style="color: white;"><span class="glyphicon glyphicon-log-in" style="color: white;"></span> Login</a></li>
+     	 <li><a href="{% url 'password_reset' %}" style="color: white;"><span class="glyphicon glyphicon-log-in" style="color: white;"></span> Forgot password</a></li>
+    	</ul>
+  		</div></li>
+         <li><a id="logout" href="{% url 'logout' %}" style="color: white;"><span class="glyphicon glyphicon-log-in" style="color: white;"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<script type="text/javascript">
+    var a = {{value}};
+    if(a==1){document.getElementById('login').style.display="none";
+      document.getElementById('signup').style.display="none";}
+    else{document.getElementById('logout').style.display="none";}  
+  </script>
+
+<div class="container">
+	<div class="row">
+	<h2 class="title">Analysts</h2>
+	<br>
+		<a href="personalities/intj.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Scientist</h3>
+			<h5 class="xxxx">INTJ</h5>
+			<img src="../static/pictures/intj.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/intp.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Thinker</h3>
+			<h5 class="xxxx">INTP</h5>
+			<img src="../static/pictures/intp.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/entj.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Executive</h3>
+			<h5 class="xxxx">ENTJ</h5>
+			<img src="../static/pictures/entj.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/entp.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Visionary</h3>
+			<h5 class="xxxx">ENTP</h5>
+			<img src="../static/pictures/entp.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+	</div>
+</div>
+<hr>
+<div class="container">
+	<div class="row">
+	<h2 class="title">Sentinals</h2>
+	<br>
+		<a href="personalities/istj.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Logistician</h3>
+			<h5 class="xxxx">ISTJ</h5>
+			<img src="../static/pictures/istj.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/estj.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Guardian</h3>
+			<h5 class="xxxx">ESTJ</h5>
+			<img src="../static/pictures/estj.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/isfj.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Nurturer</h3>
+			<h5 class="xxxx">ISFJ</h5>
+			<img src="../static/pictures/isfj.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/esfj.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Caregiver</h3>
+			<h5 class="xxxx">ESFJ</h5>
+			<img src="../static/pictures/esfj.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+	</div>
+</div>
+<hr>
+<div class="container">
+	<div class="row">
+	<h2 class="title">Diplomats</h2>
+	<br>
+		<a href="personalities/infj.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Protector</h3>
+			<h5 class="xxxx">INFJ</h5>
+			<img src="../static/pictures/infj.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/enfj.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Giver</h3>
+			<h5 class="xxxx">ENFJ</h5>
+			<img src="../static/pictures/enfj.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/infp.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Idealist</h3>
+			<h5 class="xxxx">INFP</h5>
+			<img src="../static/pictures/infp.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/enfp.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Inspirer</h3>
+			<h5 class="xxxx">ENFP</h5>
+			<img src="../static/pictures/enfp.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+	</div>
+</div>
+<hr>
+<div class="container">
+	<div class="row">
+	<h2 class="title">Explorers</h2>
+	<br>
+		<a href="personalities/isfp.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Artist</h3>
+			<h5 class="xxxx">ISFP</h5>
+			<img src="../static/pictures/isfp.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/esfp.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Performer</h3>
+			<h5 class="xxxx">ESFP</h5>
+			<img src="../static/pictures/esfp.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/istp.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Mechanic</h3>
+			<h5 class="xxxx">ISTP</h5>
+			<img src="../static/pictures/istp.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+		<a href="personalities/estp.html" target="_blank"><div class="col-sm-3 ">
+			<h3 class="text">The Doer</h3>
+			<h5 class="xxxx">ESTP</h5>
+			<img src="../static/pictures/estp.png" style="width: 40%" class="center">
+			<br><br><p class="text text-quote">" This is the quote "</p>
+		</div></a>
+	</div>
+</div>
+<hr>
+
+<footer>
+		<div class="container-fluid" style="background-color: lightgrey;">
+			<h3 style="text-align: center;">PersonalityHUB</h3>
+			<hr>
+			<div class="row" >
+					<div class="col-sm-3" style="color: gray;border-right: 1px solid grey;" >
+						<h4 style="text-align: center;">Navigation</h4>
+						<ul type="none">
+							<li>Home</li>
+							<li>16pesonalities</li>
+							<li>Resources</li>
+							<li>Take test</li>
+							<li>About</li>
+						</ul>
+					</div>
+					<div class=" col-sm-6"  style="text-align: center;color: gray;padding-top: 60px;border-right: 1px solid grey;padding-bottom: 65px;">
+					Copyright Owned by Shahzan Sadick.
+				    </div>
+					<div class="col-sm-3" style="text-align: center;color: gray;">
+						<h4><u>Lorem</u></h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+			</div>
+			<hr>
+		</div>	
+</footer>
+	
+</body>
+</html>
